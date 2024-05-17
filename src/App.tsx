@@ -1,25 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import { ThemeProvider } from "styled-components";
+import GlobalStyles from "./Global styles/GlobalStyles";
+import theme from "./theme/Theme";
+import Homepage from "./components/pages/homepage";
+
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+
+// creating browser routing
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Homepage/>
+  }
+])
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      <RouterProvider router={router}/>
+    </ThemeProvider>
   );
 }
 

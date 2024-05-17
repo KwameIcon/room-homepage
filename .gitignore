@@ -21,3 +21,16 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
+# Sketch file 
+*.sketch
+
+# XD or Figma
+*.xd
+*.fig
+
+#.DS_Store files!
+.DS_Store
+
+.prettierignore
