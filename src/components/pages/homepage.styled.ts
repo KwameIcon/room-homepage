@@ -10,7 +10,6 @@ export const StyledHomepage = styled.main`
     @media screen and (max-width: 375px) {
         position: relative;
         max-width: 373px;
-        height: 1538px;
         background: #FFFFFF;
     }
     

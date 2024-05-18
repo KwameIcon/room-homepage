@@ -5,12 +5,8 @@ import ShowcaseTop from "./top/showcase-top";
 function Showase() {
   return (
     <StyledShowcase>
-      <div className="showcase-top">
         <ShowcaseTop/>
-      </div>
-      <div className="showcase-bottom">
         <ShowcaseButtom/>
-      </div>
     </StyledShowcase>
   )
 }

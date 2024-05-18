@@ -1,76 +1,92 @@
 import styled from "styled-components";
 
 export const StyledShowcaseBottom = styled.section`
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    position: absolute;
+    width: 1440px;
     height: 266px;
-    left: 0px;
-    top: 534px;
-    overflow: hidden;
+    display: flex;
+    gap: 0;
 
-
+    @media screen and (max-width: 375px) {
+        max-width: 375px;
+        flex-direction: column;
+        height: 738px;
+    }
 
     .about-darkness{
-        /* width: 420px; */
-        width: 30%;
+        width: 420px;
         height: 266px;
 
+        .about{
+            width: 100%;
+            height: 100%;
+        }
 
+        @media screen and (max-width: 375px) {
+            background: #D8D8D8;
+        }
     }
 
     .furniture-info{
-        /* width: 490px; */
-        width: 40%;
-        height: 100%;
-        background-color: ${({theme}) => theme.colors.white};
+        width: 580px;
+        height: 266px;
         display: flex;
         justify-content: center;
         align-items: center;
+        background-color: ${({theme}) => theme.colors.white};
 
-
-
-        div{
-            width: 400px;
-            margin: 0px 20px;
+        & > div{
+            width: 484px;
             height: 139px;
             display: flex;
-            flex-direction: column;
             gap: 20px;
+            flex-direction: column;
 
             h6{
-                height: 22px;
-                font-family: 'League Spartan';
                 font-style: normal;
-                font-weight: 700;
+                font-weight: ${({theme}) => theme.typography.fontWeight.bold};
                 font-size: 16px;
                 line-height: 22px;
                 text-align: justify;
                 letter-spacing: 5px;
-                color: #000000;
+                color: ${({theme}) => theme.colors.black};
+
+
+                @media screen and (max-width: 375px) {
+                    font-size: 14px;
+                    letter-spacing: 5.83333px;
+                }
             }
 
             p{
-                font-family: 'League Spartan';
+                height: 110px;
                 font-style: normal;
-                font-weight: 500;
-                font-size: 15px;
+                font-weight: ${({theme}) => theme.typography.fontWeight.regular};
+                font-size: 16px;
                 line-height: 22px;
                 letter-spacing: -0.333333px;
-                color: #A0A0A0;
+                color: ${({theme}) => theme.colors.darkGray};
+
             }
-            
         }
 
+
+        @media screen and (max-width: 375px) {
+            width: 375px;
+            height: 300px;
+            padding: 50px 20px;
+            margin-bottom: 50px;
+        }
     }
 
     .about-light{
-        /* width: 440px; */
-        width: 30%;
+        width: 440px;
         height: 266px;
-        left: 1000px;
-        top: 534px;
+
+        @media screen and (max-width:375px) {
+            width: 375px;
+            height: 227px;
+        }
     }
+
+
 `
