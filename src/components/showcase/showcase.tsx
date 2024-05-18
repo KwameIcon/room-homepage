@@ -5,10 +5,10 @@ import ShowcaseTop from "./top/showcase-top";
 function Showase() {
   return (
     <StyledShowcase>
-        <ShowcaseTop/>
-        <ShowcaseButtom/>
+      <ShowcaseTop/>
+      <ShowcaseButtom/>
     </StyledShowcase>
-  )
+  );
 }
 
 export default Showase;
