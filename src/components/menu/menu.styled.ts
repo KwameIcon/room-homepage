@@ -1,7 +1,10 @@
 import styled from "styled-components";
 
+interface StyledMenuProp {
+  isMenuDisplayed: boolean;
+}
 
-export const StyledMenu = styled.div`
+export const StyledMenu = styled.div<StyledMenuProp>`
   height: 100%;
   font-size: 16px;
 
@@ -9,21 +12,24 @@ export const StyledMenu = styled.div`
     position: fixed;
     inset: 0;
     width: 375px;
-    height: 1538px;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 110;
+    height: 110px;
+    z-index: 100;
+    visibility: ${({ isMenuDisplayed }) => isMenuDisplayed ? 'visible' : 'hidden'};
+    opacity: ${({ isMenuDisplayed }) => isMenuDisplayed ? '1' : '0'};
+    transition: visibility 0s, opacity 0.3s linear;
 
     ul {
       position: absolute;
-      width: 375px;
+      width: 100vw;
       height: 110px;
       left: 0px;
       top: 0px;
       padding-left: 50px;
       background: #FFFFFF;
+      z-index: 100;
 
       li {
-        color: ${({theme}) => theme.colors.black};
+        color: ${({ theme }) => theme.colors.black};
       }
     }
   }
@@ -35,8 +41,8 @@ export const StyledMenu = styled.div`
     justify-content: center;
 
     img {
-      margin-right: 30px;
-      margin-left: -50px;
+      margin-right: 70px;
+      margin-left: -55px;
     }
   }
 
