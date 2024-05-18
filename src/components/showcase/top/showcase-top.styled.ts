@@ -79,6 +79,7 @@ export const StyledShowcaseTop = styled.section`
         width: 600px;
         height: 534px;
         padding: 0px 25px 0px 55px;
+        background-color: ${({theme}) => theme.colors.white};
         display: flex;
         gap: 20px;
         flex-direction: column;
