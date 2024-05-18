@@ -41,8 +41,13 @@ export const StyledMenu = styled.div<StyledMenuProp>`
     justify-content: center;
 
     img {
+      display: none;
       margin-right: 70px;
       margin-left: -55px;
+
+      @media screen and (max-width: 375px) {
+        display: block;
+      }
     }
   }
 

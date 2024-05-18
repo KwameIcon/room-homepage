@@ -5,17 +5,19 @@ type displayMenuProps = {
 }
 
 export const StyledHeader = styled.div<displayMenuProps>`
-  position: fixed;
-  width: 362px;
-  height: 15px;
-  left: 0px;
-  top: 63px;
-  z-index: 10;
-  background: transparent;
-  display: flex;
-  gap: 20px;
-  justify-content: space-evenly;
-  align-items: center;
+    position: fixed;
+    z-index: 10;
+    background: transparent;
+    display: flex;
+    gap: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 362px;
+    height: 15px;
+    left: 64px;
+    top: 63px;
+
+
 
   @media screen and (max-width: 375px) {
     width: 100vw;
