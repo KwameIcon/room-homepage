@@ -8,10 +8,9 @@ export const StyledShowcaseBottom = styled.section`
     gap: 0;
 
     @media screen and (max-width:768px) {
-        max-width: 768pxpx;
+        max-width: 768px;
         flex-direction: column;
-        gap: 20px;
-        /* max-height: 768px; */
+        height: 768px;
     
         @media screen and (max-width: 375px) {
             max-width: 375px;
@@ -25,10 +24,12 @@ export const StyledShowcaseBottom = styled.section`
 
         @media screen and (max-width:768px) {
             width: 768px;
+            height: 100%;
             background: #D8D8D8;
 
             img{
                 width: 100%;
+                height: 100%;
             }
         
             @media screen and (max-width: 375px) {
@@ -87,9 +88,10 @@ export const StyledShowcaseBottom = styled.section`
         
             @media screen and (max-width: 375px) {
                 width: 375px;
-                padding: 50px 20px;
                 margin-bottom: 50px;
                 height: 213px;
+                margin-top: 0;
+                padding: 20px;
 
 
             }
@@ -111,6 +113,7 @@ export const StyledShowcaseBottom = styled.section`
             @media screen and (max-width:375px) {
                 width: 375px;
                 height: 227px;
+                margin-top: 39px;
             }
         }
     }
