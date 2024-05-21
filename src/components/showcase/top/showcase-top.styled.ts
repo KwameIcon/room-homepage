@@ -7,26 +7,38 @@ export const StyledShowcaseTop = styled.section`
     display: flex;
     position: relative;
 
-    // Responsive design for screens with max width of 375px
-    @media screen and (max-width: 375px) {
-        max-width: 375px;
-        min-height: 800px;
-        flex-flow: wrap;
+    /* Responsive design for screens with max width of 768px */
+    @media screen and (max-width: 768px) {
+            max-width: 768px;
+            min-height: 800px;
+            flex-flow: wrap;
+    
+        // Responsive design for screens with max width of 375px
+        @media screen and (max-width: 375px) {
+            max-width: 375px;
+            min-height: 800px;
+            flex-flow: wrap;
 
+        }
     }
 
     // Styles for the image container
     .image-container {
-        width: 840px;
+        width: 61.5%;
         height: 100%;
         flex-shrink: 0;
         overflow: hidden;
         user-select: none;
 
-        // Responsive design for screens with max width of 375px
-        @media screen and (max-width: 375px) {
-            width: 375px;
-            height: 360px;
+        @media screen and (max-width: 768px) {
+            width: 768px;
+            height: 600px;
+           
+            // Responsive design for screens with max width of 375px
+            @media screen and (max-width: 375px) {
+                width: 375px;
+                height: 360px;
+            }
         }
 
         // Nested style for the image with transition effect
@@ -42,8 +54,8 @@ export const StyledShowcaseTop = styled.section`
         position: absolute;
         width: 160px;
         height: 80px;
-        left: 840px;
-        top: 454px;
+        left: 61.5%;
+        top: 85.6%;
         user-select: none;
 
         // Style for the left arrow button
@@ -70,16 +82,16 @@ export const StyledShowcaseTop = styled.section`
             }
         }
 
-        // Responsive design for screens with max width of 375px
-        @media screen and (max-width: 375px) {
-            /* Normal styling for other browsers */
+// Responsive design for screens with max width of 768px
+        @media screen and (max-width:768px) {
             width: 112px;
             height: 56px;
-            left: 263px;
-            top: 304px;
+            left: 85.5%;
+            top: 454px;
 
             /* Adjust size and position for the left arrow button */
             & > :nth-child(1) {
+                top: 25px;
                 width: 56px;
                 height: 56px;
                 z-index: 0;
@@ -87,14 +99,35 @@ export const StyledShowcaseTop = styled.section`
 
             /* Adjust size and position for the right arrow button */
             & > :nth-child(2) {
+                top: 25px;
                 width: 56px;
                 height: 56px;
                 z-index: 0;
             }
+        
 
-            /* Firefox-specific styling */
-            @-moz-document url-prefix() {
-                left: 225px; /* Adjust the left position for Firefox */
+            // Responsive design for screens with max width of 375px
+            @media screen and (max-width: 375px) {
+                /* Normal styling for other browsers */
+                width: 112px;
+                height: 56px;
+                left: 263px;
+                top: 304px;
+
+                /* Adjust size and position for the left arrow button */
+                & > :nth-child(1) {
+                    top: 0;
+                }
+
+                /* Adjust size and position for the right arrow button */
+                & > :nth-child(2) {
+                    top: 0;
+                }
+
+                /* Firefox-specific styling */
+                @-moz-document url-prefix() {
+                    left: 225px; /* Adjust the left position for Firefox */
+                }
             }
         }
 
@@ -103,8 +136,8 @@ export const StyledShowcaseTop = styled.section`
     // Styles for the text content
     .text-content {
         position: relative;
-        width: 600px;
-        height: 531px;
+        width: 39.5%;
+        height: 530px;
         padding: 0px 25px 0px 55px;
         background-color: ${({ theme }) => theme.colors.white};
         display: flex;
@@ -113,12 +146,19 @@ export const StyledShowcaseTop = styled.section`
         justify-content: center;
         align-items: flex-start;
 
-        // Responsive design for screens with max width of 375px
-        @media screen and (max-width: 375px) {
+        @media screen and (max-width:768px) {
             padding-left: 30px;
-            margin-top: -80px;
-            max-width: 375px;
-            max-height: 278px;
+            padding-top: 0;
+            margin-bottom: 10px;
+            width: 768px;
+            height: 300px;
+        
+            // Responsive design for screens with max width of 375px
+            @media screen and (max-width: 375px) {
+                margin-top: -80px;
+                max-width: 375px;
+                max-height: 278px;
+            }
         }
 
         // Styles for the header text
@@ -130,14 +170,19 @@ export const StyledShowcaseTop = styled.section`
             letter-spacing: -2px;
             color: ${({ theme }) => theme.colors.veryDarkGray};
 
-            // Responsive design for screens with max width of 375px
-            @media screen and (max-width: 375px) {
-                font-style: normal;
-                font-weight: 600;
-                font-size: 40px;
-                line-height: 37px;
-                letter-spacing: -1.66667px;
-                color: ${({ theme }) => theme.colors.black};
+
+            @media screen and (max-width:768px) {
+                margin-top: -80px;
+            
+                // Responsive design for screens with max width of 375px
+                @media screen and (max-width: 375px) {
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 40px;
+                    line-height: 37px;
+                    letter-spacing: -1.66667px;
+                    color: ${({ theme }) => theme.colors.black};
+                }
             }
         }
 

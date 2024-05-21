@@ -7,10 +7,15 @@ export const StyledShowcaseBottom = styled.section`
     display: flex;
     gap: 0;
 
-    @media screen and (max-width: 375px) {
-        max-width: 375px;
+    @media screen and (max-width:768px) {
+        max-width: 768pxpx;
         flex-direction: column;
-        height: 738px;
+        gap: 20px;
+        min-height: 768px;
+    
+        @media screen and (max-width: 375px) {
+            max-width: 375px;
+        }
     }
 
     /* Styles for the "about-darkness" section */
@@ -18,8 +23,16 @@ export const StyledShowcaseBottom = styled.section`
         width: 420px;
         height: 266px;
 
-        @media screen and (max-width: 375px) {
-            background: #D8D8D8;
+        @media screen and (max-width:768px) {
+            width: 768px;
+
+            img{
+                width: 100%;
+            }
+        
+            @media screen and (max-width: 375px) {
+                background: #D8D8D8;
+            }
         }
     }
 
@@ -65,11 +78,17 @@ export const StyledShowcaseBottom = styled.section`
             }
         }
 
-        @media screen and (max-width: 375px) {
-            width: 375px;
-            height: 300px;
-            padding: 50px 20px;
-            margin-bottom: 50px;
+        @media screen and (max-width:768px) {
+            width: 768px;
+            margin: 20px 0px;
+            margin-top: 250px;
+        
+            @media screen and (max-width: 375px) {
+                width: 375px;
+                height: 300px;
+                padding: 50px 20px;
+                margin-bottom: 50px;
+            }
         }
     }
 
@@ -78,9 +97,17 @@ export const StyledShowcaseBottom = styled.section`
         width: 440px;
         height: 266px;
 
-        @media screen and (max-width:375px) {
-            width: 375px;
-            height: 227px;
+        @media screen and (max-width: 768px) {
+            width: 768px;
+
+            img{
+                width: 100%;
+            }
+        
+            @media screen and (max-width:375px) {
+                width: 375px;
+                height: 227px;
+            }
         }
     }
 `;

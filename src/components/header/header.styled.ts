@@ -14,8 +14,8 @@ export const StyledHeader = styled.div<displayMenuProps>`
     gap: 20px; // Space between child elements
     justify-content: space-evenly; // Evenly distribute child elements
     align-items: center; // Center align items vertically
-    width: 362px;
-    height: 15px;
+    width: 26%;
+    height: 20px;
     left: 64px;
     top: 63px;
 

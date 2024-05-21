@@ -7,11 +7,14 @@ export const StyledHomepage = styled.main`
     overflow: hidden;
 
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width:768px) {
         position: relative;
-        max-width: 373px;
+        max-width: 768px;
         background: #FFFFFF;
-    }
     
+        @media screen and (max-width: 375px) {
+            max-width: 373px;
+        }
+    }
 
 `

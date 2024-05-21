@@ -10,7 +10,7 @@ function ShowcaseTop() {
     const [currentIndex, setCurrentIndex] = useState<number>(0);
     const [imageType, setImageType] = useState<string>('');
 
-    // Function to handle slider navigation
+    // Function to handle slider navigation on mouse click
     const handleSlider = useCallback((direction: 'left' | 'right') => {
         const dataLength = SHOWCASEDATA.length - 1;
         setCurrentIndex(prev => {
