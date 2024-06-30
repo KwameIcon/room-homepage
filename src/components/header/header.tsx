@@ -1,5 +1,6 @@
 import Menu from "../menu/menu";
-import { StyledHeader } from "./header.styled";
+import IconClosed from "../../assets/images/icon-close.svg";
+import { StyledHeader, Overlay, HamburgerIconWrapper, CloseIcon, Logo, MenuWrapper } from "./header.styled";
 
 import LogoIcon from '../../assets/images/logo.svg';
 import HamburgerIcon from '../../assets/images/icon-hamburger.svg';
@@ -7,27 +8,28 @@ import { useState } from "react";
 
 function Header() {
   // State to control the visibility of the menu
-  const [displayMenu, setDisplayMenu] = useState(false);
+  const [displayMenu, setDisplayMenu] = useState(true);
 
   // Function to toggle the menu visibility
   const toggleMenu = () => {
-    setDisplayMenu(prevState => !prevState);
+    setDisplayMenu(prev => !prev);
   };
 
   return (
-    // Pass the displayMenu state as a prop to StyledHeader
-    <StyledHeader displayMenu={displayMenu}>
+    <StyledHeader>
       {/* Overlay that covers the screen when the menu is open */}
-      <div className="overlay" onClick={toggleMenu}/>
+      <Overlay displayMenu={displayMenu} onClick={toggleMenu} />
       
       {/* Hamburger icon to open the menu */}
-      <img src={HamburgerIcon} alt="menu" onClick={toggleMenu} />
+      {displayMenu ? <HamburgerIconWrapper src={HamburgerIcon} alt="menu" onClick={toggleMenu} /> : <CloseIcon src={IconClosed} alt="closed icon" onClick={toggleMenu} />}
       
       {/* Logo */}
-      <img src={LogoIcon} alt="Logo" />
+      <Logo src={LogoIcon} alt="Logo" />
       
       {/* Menu component with props to control its visibility */}
-      <Menu displayMenu={displayMenu} setDisplayMenu={setDisplayMenu} />
+      <MenuWrapper displayMenu={displayMenu}>
+        <Menu displayMenu={displayMenu} setDisplayMenu={setDisplayMenu} />
+      </MenuWrapper>
     </StyledHeader>
   );
 }

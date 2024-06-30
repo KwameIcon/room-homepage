@@ -1,4 +1,3 @@
-// Import necessary modules
 import { createGlobalStyle } from "styled-components";
 
 // Define global styles using createGlobalStyle from styled-components
@@ -10,30 +9,30 @@ const GlobalStyles = createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        scrollbar-width: none; /* Remove scrollbar width for consistency */
+        scrollbar-width: none; 
     }
 
     /* Global styles for the body element */
     body {
-        width: 100%; /* Ensure body takes full width of the viewport */
-        overflow-x: hidden; /* Hide horizontal overflow */
-        font-family: ${({ theme }) => theme.typography.fontFamily}; /* Set font family from theme */
-        font-size: 12px; /* Set base font size */
-        margin: 0; /* Remove default margin */
-        padding: 0; /* Remove default padding */
-        color: ${({ theme }) => theme.colors.veryDarkGray}; /* Set text color from theme */
-        background-color: ${({ theme }) => theme.colors.black}; /* Set background color from theme */
+        width: 100%; 
+        overflow-x: hidden; 
+        font-family: ${({ theme }) => theme.typography.fontFamily}; 
+        font-size: 12px; 
+        margin: 0; 
+        color: ${({ theme }) => theme.colors.veryDarkGray};
+        background-color: ${({ theme }) => theme.colors.white};
+        color: ${({ theme }) => theme.colors.black};
     }
 
     /* Global styles for anchor (link) elements */
     a {
-        color: ${({ theme }) => theme.colors.black}; /* Set link color from theme */
-        text-decoration: none; /* Remove default underline decoration */
+        color: ${({ theme }) => theme.colors.black}; 
+        text-decoration: none; 
     }
 
     /* Global styles for list items */
     li {
-        list-style-type: none; /* Remove default list item bullet */
+        list-style-type: none; 
     }
 `;
 
